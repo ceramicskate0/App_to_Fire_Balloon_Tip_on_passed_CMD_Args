@@ -1,7 +1,8 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -29,7 +30,17 @@ namespace BallonAlert
 
         private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
+            Process.Start("mmc.exe","\"C:\\WINDOWS\\system32\\eventvwr.msc\" /s");
+        }
 
+        private void notifyIcon1_MouseClick(object sender, MouseEventArgs e)
+        {
+            Environment.Exit(0);
+        }
+
+        private void notifyIcon1_BalloonTipClicked(object sender, EventArgs e)
+        {
+            Process.Start("mmc.exe", "\"C:\\WINDOWS\\system32\\eventvwr.msc\" /s");
         }
     }
 }
