@@ -37,26 +37,55 @@ namespace BallonAlert
 
         private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            Process.Start("C:\\windows\\system32\\eventvwr.msc", " /s");
-            Environment.Exit(0);
+            try
+            {
+                Process.Start("C:\\windows\\system32\\eventvwr.msc", " /s");
+                Environment.Exit(0);
+            }
+            catch
+            {
+                Environment.Exit(1);
+            }
         }
 
         private void notifyIcon1_BalloonTipClicked_1(object sender, EventArgs e)
         {
-            Process.Start("C:\\windows\\system32\\eventvwr.msc", " /s");
-            Environment.Exit(0);
+            try
+            {
+                Process.Start("C:\\windows\\system32\\eventvwr.msc", " /s");
+                Environment.Exit(0);
+            }
+            catch
+            {
+                Environment.Exit(1);
+            }
         }
 
         private void notifyIcon1_Click(object sender, EventArgs e)
         {
-            Process.Start("C:\\windows\\system32\\eventvwr.msc", " /s");
-            Environment.Exit(0);
+            try
+            {
+                Process.Start("C:\\windows\\system32\\eventvwr.msc", " /s");
+                Environment.Exit(0);
+            }
+            catch
+            {
+                Environment.Exit(1);
+            }
         }
 
         private void notifyIcon1_MouseClick(object sender, MouseEventArgs e)
         {
-            Process.Start("C:\\windows\\system32\\eventvwr.msc", " /s");
-            Environment.Exit(0);
+            try
+            {
+                Process.Start("C:\\windows\\system32\\eventvwr.msc", " /s");
+                Environment.Exit(0);
+            }
+            catch
+            {
+                Environment.Exit(1);
+            }
         }
     }
 }
+
